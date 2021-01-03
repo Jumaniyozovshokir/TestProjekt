@@ -14,6 +14,10 @@ public interface Emoji {
     String Deslike =EmojiParser.parseToUnicode("\uD83D\uDC4E Deslike");
     String Taklif =EmojiParser.parseToUnicode("✍ Xabar");
     String test =EmojiParser.parseToUnicode(":outbox_tray:TESTLAR");
+    String testTopshirish =EmojiParser.parseToUnicode("\uD83D\uDCC3 Test topshirish");
+    String testTuzish =EmojiParser.parseToUnicode("\uD83D\uDCC3 Test tuzish");
+    String testTopshirishgaOtish =EmojiParser.parseToUnicode("\uD83D\uDCC3 Test Bo'limiga O'tsh");
+    String testTuzishgaOtish =EmojiParser.parseToUnicode("\uD83D\uDCC3 Test Tuzish Bo'limiga O'tsh");
     String Kitoblar =EmojiParser.parseToUnicode(":book: Kitoblar");
 
     String backBoshMenyu =EmojiParser.parseToUnicode(":back:Orqaga Qaytish");

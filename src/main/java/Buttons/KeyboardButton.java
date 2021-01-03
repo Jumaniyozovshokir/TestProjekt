@@ -19,10 +19,15 @@ public class KeyboardButton implements Emoji, BoshMenyu, Oqituvchi, Oquvchi {
         keyboardButtons.add(new org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.KeyboardButton(oqituvchilar));
         keyboardButtons.add(new org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.KeyboardButton(oquvchi));
         keyboardButtons.add(new org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.KeyboardButton(MENYU));
+
         KeyboardRow keyboardButtons1=new KeyboardRow();
-        keyboardButtons1.add(new org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.KeyboardButton(fikrBildirish));
+        KeyboardRow keyboardButtons2=new KeyboardRow();
+        keyboardButtons1.add(new org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.KeyboardButton(testTuzish));
+        keyboardButtons1.add(new org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.KeyboardButton(testTopshirish));
+        keyboardButtons2.add(new org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.KeyboardButton(fikrBildirish));
         keyboardRows.add(keyboardButtons);
         keyboardRows.add(keyboardButtons1);
+        keyboardRows.add(keyboardButtons2);
         return replyKeyboardMarkup.setKeyboard(keyboardRows);
     }
     public  static ReplyKeyboardMarkup menyuFanlar(){

@@ -1,12 +1,8 @@
 package Buttons;
 
-import Model.Tugmalar;
 import emoji.*;
 import org.telegram.telegrambots.meta.api.objects.replykeyboard.InlineKeyboardMarkup;
-import org.telegram.telegrambots.meta.api.objects.replykeyboard.ReplyKeyboardMarkup;
 import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.InlineKeyboardButton;
-import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.KeyboardButton;
-import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.KeyboardRow;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -4571,6 +4567,24 @@ public class inlineButton implements Emoji, BoshMenyu, Oqituvchi, Oquvchi, emoji
         inlineRows.add(inlineRow);
         inlineRow=new ArrayList<InlineKeyboardButton>();
         inlineRow.add(new InlineKeyboardButton(sinf_11).setCallbackData(dsinf_11));
+        inlineRows.add(inlineRow);
+        inlineKeyboardMarkup.setKeyboard(inlineRows);
+        return inlineKeyboardMarkup;
+    }
+    static public InlineKeyboardMarkup TestTopshirish() {
+        InlineKeyboardMarkup inlineKeyboardMarkup = new InlineKeyboardMarkup();
+        List<List<InlineKeyboardButton>> inlineRows = new ArrayList<List<InlineKeyboardButton>>();
+        List<InlineKeyboardButton> inlineRow = new ArrayList<InlineKeyboardButton>();
+        inlineRow.add(new InlineKeyboardButton(testTopshirish).setCallbackData(testTopshirish).setUrl("http://t.me/TestTopshirishMaktabBot"));
+        inlineRows.add(inlineRow);
+        inlineKeyboardMarkup.setKeyboard(inlineRows);
+        return inlineKeyboardMarkup;
+    }
+    static public InlineKeyboardMarkup TestTuzish() {
+        InlineKeyboardMarkup inlineKeyboardMarkup = new InlineKeyboardMarkup();
+        List<List<InlineKeyboardButton>> inlineRows = new ArrayList<List<InlineKeyboardButton>>();
+        List<InlineKeyboardButton> inlineRow = new ArrayList<InlineKeyboardButton>();
+        inlineRow.add(new InlineKeyboardButton(testTopshirishgaOtish).setCallbackData(testTopshirishgaOtish).setUrl("https://t.me/quizbot"));
         inlineRows.add(inlineRow);
         inlineKeyboardMarkup.setKeyboard(inlineRows);
         return inlineKeyboardMarkup;

@@ -1,6 +1,5 @@
 import Buttons.KeyboardButton;
 import Buttons.inlineButton;
-import Model.Tugmalar;
 import Model.User;
 import emoji.*;
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
@@ -8,10 +7,7 @@ import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 import org.telegram.telegrambots.meta.api.objects.Message;
 import org.telegram.telegrambots.meta.api.objects.Update;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
+
 public class pedbot extends TelegramLongPollingBot implements Emoji , BoshMenyu, Oqituvchi, Oquvchi , emoji.Darsliklar {
 //    static String url="jdbc:postgresql://localhost:5432/MaktabBoti";
 //    static   String userss="postgres";
@@ -20,7 +16,7 @@ public class pedbot extends TelegramLongPollingBot implements Emoji , BoshMenyu,
     static int desLike=0;
     static  int count=0;
     Message message=new Message();
-User user =new User();
+
 SendMessage sendMessage=new SendMessage();
     public String getBotUsername() { return "@PedagogSherobodBot"; }
     public String getBotToken() { return "1377728383:AAH0iIOYXM9S-rj3z2rwjlGqEwX790h9nKQ"; }
@@ -213,10 +209,15 @@ if (update.hasMessage()){
                     "Yuborish Bo'limida Bizga Habar Yuboring Biz Siz Kerakli Ma'lumotni Yuboramiz."));
             executeMsg(sendMessage.setChatId(chat_id).setText("https://t.me/metod10m/347?single"));
         }
-        else
-            if (text.equals(Robototexnika)){
+        else if (text.equals(Robototexnika)){
                 executeMsg(sendMessage.setChatId(chat_id).setText("https://t.me/metod10m/348?single").setReplyMarkup(inlineButton.Robototexnika()));
             }
+        else  if (text.equals(testTopshirish)){
+            executeMsg(sendMessage.setChatId(chat_id).setText("Test Bo'limiga O'ting! ").setReplyMarkup(inlineButton.TestTopshirish()));
+        }
+        else  if (text.equals(testTuzish)){
+            executeMsg(sendMessage.setChatId(chat_id).setText("Test Tuzish Bo'limiga O'ting! ").setReplyMarkup(inlineButton.TestTuzish()));
+        }
         else  if(Taklif.equals("+")){
             SendMessage sendMessage=new SendMessage();
             sendMessage.setChatId(chat_id).setText("Taklifingizdan Minnatdormiz!");
